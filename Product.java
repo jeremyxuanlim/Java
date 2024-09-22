@@ -1,37 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.inventory;
+
+/**
+ *
+ * @author Ng Pui Xian
+ */
 public class Product {
-    private String prodId;
-    private String prodName;
-    private int quantity;
-    private double price;
+    protected String productId;
+    protected String productName;
+    protected double price;
+    protected int quantity;
 
-    // Constructor
-    public Product(String prodId, String prodName, int quantity, double price) {
-        this.prodId = prodId;
-        this.prodName = prodName;
-        this.quantity = quantity;
+    public Product(String productId, String productName, double price, int quantity) {
+        this.productId = productId;
+        this.productName = productName;
         this.price = price;
+        this.quantity = quantity;
     }
 
-    // Getters
-    public String getProdId() {
-        return prodId;
+
+    public String getProductId() {
+        return productId;
     }
 
-    public String getProdName() {
-        return prodName;
-    }
-
-    public int getQuantity() {
-        return quantity;
+    public String getProductName() {
+        return productName;
     }
 
     public double getPrice() {
         return price;
     }
 
-    // Method to get total sales amount for this product
-    public double getTotalSales() {
-        return quantity * price;
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
-
