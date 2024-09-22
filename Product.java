@@ -1,56 +1,37 @@
 public class Product {
     private String prodId;
-    private double prodPrice;
     private String prodName;
-    private int quantitysold;
+    private int quantity;
+    private double price;
 
- 
-    public Product(String prodId, double prodPrice, String prodName, int quantitysold) {
+    // Constructor
+    public Product(String prodId, String prodName, int quantity, double price) {
         this.prodId = prodId;
-        this.prodPrice = prodPrice;
         this.prodName = prodName;
-        this.quantitysold = quantitysold;
+        this.quantity = quantity;
+        this.price = price;
     }
 
-
-
-
-
-
-    public String setprodId() {
+    // Getters
+    public String getProdId() {
         return prodId;
-    }
-
-    public void setprodId(String prodId) {
-        this.prodId = prodId;
-    }
-
-    public double getProPrice() {
-        return prodPrice;
-    }
-
-    public void setProdPrice(double prodPrice) {
-        this.prodPrice = prodPrice;
     }
 
     public String getProdName() {
         return prodName;
     }
 
-    public void setProdName(String prodName) {
-        this.prodName = prodName;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public int getQuantitysold() {
-        return quantitysold;
+    public double getPrice() {
+        return price;
     }
 
-    public void setQuantitysold(int quantitysold) {
-        this.quantitysold = quantitysold;
-    }
-
-    @Override
-    public String toString() {
-        return "Product ID: " + prodId + ", Name: " + prodName + ", Price: " + prodPrice + ", Quantity Sold: " + quantitysold;
+    // Method to get total sales amount for this product
+    public double getTotalSales() {
+        return quantity * price;
     }
 }
+
